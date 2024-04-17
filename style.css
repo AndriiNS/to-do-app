@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+body {
+  min-height: 100vh;
+  background: linear-gradient(to right bottom, #2c50b3, #da74ec);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.content {
+  max-width: 500px;
+  border: 1px solid #6d9eff;
+  border-radius: 30px;
+  margin: 100px auto;
+  background-color: #bacdff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.content__title {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.title__img {
+  max-width: 40px;
+}
+.title {
+  color: #253a65;
+}
+.content__input {
+  display: flex;
+  justify-content: space-between;
+  background-color: #b0c8f9;
+  border-radius: 50px;
+  padding-left: 15px;
+}
+.input-text {
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+.input-btn {
+  background-color: #c2aa1f;
+  border: none;
+  border-radius: 30px;
+  width: 100px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  outline: none;
+}
+.input-btn:hover {
+  background-color: #eccd18;
+}
+.content-task {
+  padding-left: 10px;
+}
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.task-item {
+  list-style: none;
+  color: #253a65;
+  font-size: 20px;
+  user-select: none;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  gap: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.task-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./images/unchecked.png");
+  cursor: pointer;
+}
+.task-item.checked {
+  text-decoration: line-through;
+  color: #6092f6;
+}
+.task-item.checked::before {
+  background-image: url("./images/checked.png");
+}
+.close-icon {
+  font-size: 26px;
+  position: absolute;
+  right: 0;
+  padding: 5px;
+  border-radius: 20px;
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease 0s;
+}
+.close-icon:hover {
+  background-color: #6d9eff;
+}
