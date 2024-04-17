@@ -9,6 +9,7 @@ body {
   background: linear-gradient(to right bottom, #2c50b3, #da74ec);
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 10px;
 }
 .content {
   max-width: 500px;
@@ -38,6 +39,12 @@ body {
   background-color: #b0c8f9;
   border-radius: 50px;
   padding-left: 15px;
+  @media (max-width: 500px) {
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    gap: 10px;
+  }
 }
 .input-text {
   flex: 1;
@@ -51,12 +58,17 @@ body {
   background-color: #c2aa1f;
   border: none;
   border-radius: 30px;
-  width: 100px;
+  min-width: 100px;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
   outline: none;
+  @media (max-width: 500px) {
+    width: 200px;
+    min-height: 50px;
+    align-self: flex-end;
+  }
 }
 .input-btn:hover {
   background-color: #eccd18;
